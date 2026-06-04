@@ -24,8 +24,8 @@ class DriveToVescBridge(Node):
         # ===== 速度轉換參數 =====
         # /drive.speed 是 simulator 中的速度命令
         # /commands/motor/speed 對 VESC driver 通常是 ERPM
-        self.speed_to_erpm_gain = 2500.0   
-        self.max_erpm = 3000.0            
+        self.speed_to_erpm_gain = 4000.0   
+        self.max_erpm = 6000.0            
 
         # 如果馬達方向相反，改成 -1.0
         self.speed_direction = 1.0
