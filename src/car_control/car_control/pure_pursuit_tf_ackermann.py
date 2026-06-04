@@ -24,7 +24,7 @@ class PurePursuit(Node):
         ))
         self.declare_parameter('map_frame', 'map')
         self.declare_parameter('base_frame', 'base_link')
-        self.declare_parameter('lookahead', 0.3)
+        self.declare_parameter('lookahead', 0.5)
         self.declare_parameter('speed', 0.7)          # real car first test: keep slow
         self.declare_parameter('wheelbase', 0.33)
         self.declare_parameter('max_steering', 0.45)
@@ -171,9 +171,9 @@ class PurePursuit(Node):
         marker.pose.position.z = 0.15
         marker.pose.orientation.w = 1.0
 
-        marker.scale.x = 0.35
-        marker.scale.y = 0.35
-        marker.scale.z = 0.35
+        marker.scale.x = 0.2
+        marker.scale.y = 0.2
+        marker.scale.z = 0.2
 
         marker.color.a = 1.0
         marker.color.r = 1.0

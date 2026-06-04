@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
            'pure_pursuit_tf = car_control.pure_pursuit_tf_ackermann:main',
            'waypoint_logger_tf = car_control.waypoint_logger_tf:main',
+           'drive_to_vesc_bridge = car_control.drive_to_vesc_bridge:main',
         ],
     },
 )
