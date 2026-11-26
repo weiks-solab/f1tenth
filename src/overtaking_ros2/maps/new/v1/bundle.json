@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "scope": "vehicle_integration",
+  "frame_id": "map",
+  "map_id": "new",
+  "bundle_id": "v1",
+  "map_yaml": "new.yaml",
+  "geometry_id": "ebe91e9fb04714b84465aef9629cdcb0fe57135dc91c27d4b651554902243692",
+  "domain_id": "693c2c391b28172fee4c495ea1981d4e082ef5bc397362fd923c5fa72e772ca0",
+  "footprint_lookup": "footprint_lookup.npz",
+  "planning_report": "planning.json",
+  "domain_step_m": 0.005,
+  "file_hashes": {
+    "domain/domain.npz": "693c2c391b28172fee4c495ea1981d4e082ef5bc397362fd923c5fa72e772ca0",
+    "domain/metadata.json": "c673f31d86f94e130b0b12ca4bde90f397e3dd6fbdc07742ff38afd00be1d54f",
+    "footprint_lookup.npz": "7373b407fd442e01065cf34b14613c59d135a0cb76b48d3dd01dcf763f921d56",
+    "geometry/boundaries.csv": "f4ae2462fa625cc2b798bcbd23c0fce460b66a502d3bd7b0d5b506ff97a252bf",
+    "geometry/centerline.csv": "8ad3d2479ddb5eda426a810bdba7f91238a0feb46fc6a20314e0b3691394d0b0",
+    "geometry/manifest.json": "3d3605603eda4874de2d0ae9b21e4986dc3d7ff1d6e1627b5fc59056681f9e02",
+    "geometry/reference_curve.json": "9d2bf69982652f069d487efb8f69d3c6ff4cd586c640ade7470b120effc479c9",
+    "geometry/validation.json": "4aeab77543c85aa32149cc86721d6f510818fb54a3d4f6eb08cf1e6da92be53e",
+    "geometry/validity.json": "79ace2b90d330f4857aa42137de166d6bcc271e48aba871e6e6e3ea321931c46",
+    "geometry/waypoints_ros.csv": "ba507919545ca76bacc21013391db1ff2c8bf866f9552b82d1b7a7993edd3eca",
+    "new.pgm": "9f77a13693e817cede71843eadc42a32ab8f2c7491d7c90ce8264501b4d2516a",
+    "new.yaml": "42d2629def8497b431e5e0d18da4710a7b4cfb4a8997955c1b62d54185923b23",
+    "planning.json": "120f4e3e7079b61a85e368c0dc6499d8f7276752d0818b6bb3186bb2a67fb683"
+  }
+}
