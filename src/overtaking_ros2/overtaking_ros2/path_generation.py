@@ -11,6 +11,7 @@ from f1tenth_overtaking_core.sampling import sample_candidate_xy
 from geometry_msgs.msg import Point
 from overtaking_msgs.msg import CandidatePath, CandidatePaths, MapAssets, PlanningPolicy, RelativeState
 import rclpy
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
 from .planning import load_assets, map_qos, planning_state, stamp_ns
@@ -123,6 +124,8 @@ def main():
     node = PathGeneration()
     try:
         rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
     finally:
         node.destroy_node()
         if rclpy.ok():

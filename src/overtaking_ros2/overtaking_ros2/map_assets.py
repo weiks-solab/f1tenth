@@ -6,6 +6,7 @@ from pathlib import Path
 
 import rclpy
 from overtaking_msgs.msg import MapAssets
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy
 
@@ -83,6 +84,8 @@ def main():
     try:
         node = MapAssetsNode()
         rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
     finally:
         if node is not None:
             node.destroy_node()

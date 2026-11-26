@@ -15,6 +15,7 @@ from f1tenth_overtaking_core.tracking import OpenCandidatePP
 from geometry_msgs.msg import Point
 from overtaking_msgs.msg import CandidatePaths, MapAssets, PlanningPolicy, RelativeState, TargetPath
 from rclpy.duration import Duration
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.time import Time
 
@@ -213,6 +214,8 @@ def main():
     node = OvertakingDecision()
     try:
         rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
     finally:
         node.pool.shutdown()
         node.destroy_node()

@@ -8,6 +8,7 @@ from geometry_msgs.msg import Pose2D
 from nav_msgs.msg import Odometry
 from overtaking_msgs.msg import RelativeState, SteeringState, VehicleState
 import rclpy
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 
@@ -177,6 +178,8 @@ def main():
     try:
         node = LiveRelativeState()
         rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
     finally:
         if node is not None:
             node.destroy_node()
