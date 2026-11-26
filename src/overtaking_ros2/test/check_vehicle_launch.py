@@ -27,7 +27,9 @@ def main():
     map_id = parser.parse_args().map_id
     b = Path(get_package_share_directory('overtaking_ros2')) / 'maps' / map_id / 'v1'
     geo = load_geometry(b/'geometry', b/(map_id + '.yaml'), inspect=True)
-    xy, _, yaw, _ = geo.curve.sample([0., 2.])
+    # Use a section within the installed car's steering limit for the tracking check.
+    start_s = 8. if map_id == 'new' else 0.
+    xy, _, yaw, _ = geo.curve.sample([start_s, start_s + 2.])
     rclpy.init()
     n = Node('vehicle_integration_probe')
     tf = TransformBroadcaster(n)
